@@ -39,14 +39,12 @@ class App extends Component {
       data: JSON.stringify({nome:this.state.nome, email:this.state.email, senha:this.state.senha }),
       success: function(resposta){
         console.log("enviado com sucesso");
-      },
+        this.setState({lista:resposta})
+      }.bind(this),
       error: function(resposta){
           console.log("erro");
       }
     })
-
-
-
 
   }
 
