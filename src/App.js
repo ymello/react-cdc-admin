@@ -43,7 +43,7 @@ class App extends Component {
       }.bind(this),
       error: function(resposta){
           console.log("erro");
-      }
+      }.bind(this)
     })
 
   }
